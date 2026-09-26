@@ -4,7 +4,7 @@ const cors = require("cors");
 const connectDB = require("./config/db");
 const workshopRoutes = require("./routes/workshopRoutes");
 const eventsRoutes = require("./routes/eventsRoutes");
-const bookOrdersRoutes = require("./routes/bookOrdersRoutes")
+const bookOrdersRoutes = require("./routes/bookOrdersRoutes");
 const departmentRoutes = require("./routes/departmentRoutes");
 const placementRoutes = require("./routes/placementRoutes");
 const admissionRoutes = require("./routes/admissionRoutes");
@@ -22,8 +22,13 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.use(
   cors({
-    origin: ["http://localhost:5173",
-        "http://localhost:5174"
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:5174",
+      "http://admin.cinemafactoryacademy.com",
+      "https://admin.cinemafactoryacademy.com",
+      "http://cinemafactoryacademy.com",
+      "https://cinemafactoryacademy.com",
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
@@ -42,10 +47,10 @@ app.use("/api/auth", adminRoutes);
 
 app.get("/", (req, res) => {
   res.send("CFA New API is Working...!");
-}); 
+});
 
 const PORT = process.env.PORT;
 
-app.listen(PORT, () => {  
+app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
