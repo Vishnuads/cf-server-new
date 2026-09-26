@@ -16,8 +16,9 @@ async function createAdmin() {
 
   const admin = new Admin({
     username: 'admin@gmail.com',       
-    password: 'admin123', // this gets hashed automatically
+    password: 'admin123', 
   });
+  
 
   await admin.save();
   console.log('Admin created successfully');
