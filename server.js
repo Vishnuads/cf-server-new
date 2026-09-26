@@ -41,7 +41,7 @@ app.use("/api/contact", contactRoutes);
 app.use("/api/auth", adminRoutes);
 
 app.get("/", (req, res) => {
-  res.send("API is Working...!");
+  res.send("CFA New API is Working...!");
 }); 
 
 const PORT = process.env.PORT;
