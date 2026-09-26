@@ -30,8 +30,14 @@ app.use(
       "http://cinemafactoryacademy.com",
       "https://cinemafactoryacademy.com",
     ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     credentials: true,
+    allowedHeaders: [
+      "Content-Type",
+      "Authorization",
+      "X-App-Secret",
+      "X-App-Client",
+    ],
   }),
 );
 
