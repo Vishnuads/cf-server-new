@@ -25,9 +25,9 @@ app.use(
     origin: [
       "http://localhost:5173",
       "http://localhost:5174",
-      "http://admin.cinemafactoryacademy.com",
+      "https://www.admin.cinemafactoryacademy.com",
       "https://admin.cinemafactoryacademy.com",
-      "http://cinemafactoryacademy.com",
+      "https://www.cinemafactoryacademy.com",
       "https://cinemafactoryacademy.com",
     ],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
