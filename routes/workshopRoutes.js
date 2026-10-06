@@ -32,6 +32,6 @@ router.post("/create", upload.single("poster"), createWorkshop);
 router.get("/get/:id",  getWorkshopsId)
 router.get("/get", getWorkshops);
 router.delete("/delete/:id", deleteWorkshop);
-router.put("/update/:id",upload.single("poster"), updateWorkshop);
+router.put("/update/:id", upload.single("poster"), updateWorkshop);
 
 module.exports = router;

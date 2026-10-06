@@ -11,6 +11,8 @@ const admissionRoutes = require("./routes/admissionRoutes");
 const workshopRegistrationRoutes = require("./routes/workshopRegistrationRoutes");
 const contactRoutes = require("./routes/contactRoutes");
 const adminRoutes = require("./routes/adminRoute");
+const mentorsRoute = require("./routes/mentorsRoute")
+
 
 const path = require("path");
 dotenv.config();
@@ -49,6 +51,7 @@ app.use("/api/placements", placementRoutes);
 app.use("/api/admission", admissionRoutes);
 app.use("/api/workshop-registration", workshopRegistrationRoutes);
 app.use("/api/contact", contactRoutes);
+app.use("/api/mentors", mentorsRoute)
 app.use("/api/auth", adminRoutes);
 
 app.get("/", (req, res) => {

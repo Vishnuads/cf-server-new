@@ -33,7 +33,7 @@ const placementSchema = new mongoose.Schema(
       required: true,
     },
     studentImage: {
-      type: String, // e.g. "/uploads/students/xyz.jpg"
+      type: String, 
       default: null,
     },
     companyLogo: {

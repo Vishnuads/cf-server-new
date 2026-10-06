@@ -87,7 +87,6 @@ const updateWorkshop = async (req, res) => {
         message: "Workshop not found",
       });
     }
-
     // Parse points
     let parsedPoints = existingWorkshop.points;
 
@@ -193,7 +192,6 @@ const getWorkshopsId = async (req, res) => {
   }
 };
 
-// deleteWorkshop.js
 const deleteWorkshop = async (req, res) => {
   try {
     const workshop = await Workshops.findById(req.params.id);
