@@ -18,7 +18,6 @@ async function createAdmin() {
     username: 'admin@gmail.com',       
     password: 'admin123', 
   });
-  
 
   await admin.save();
   console.log('Admin created successfully');
