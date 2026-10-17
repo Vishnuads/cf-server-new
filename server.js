@@ -11,8 +11,9 @@ const admissionRoutes = require("./routes/admissionRoutes");
 const workshopRegistrationRoutes = require("./routes/workshopRegistrationRoutes");
 const contactRoutes = require("./routes/contactRoutes");
 const adminRoutes = require("./routes/adminRoute");
-const mentorsRoute = require("./routes/mentorsRoute");
-const jobApplicaitonRoute = require("./routes/jobApplicationRoutes")
+const mentorsRoutes = require("./routes/mentorsRoute");
+const jobApplicaitonRoutes = require("./routes/jobApplicationRoutes");
+const jobRoutes = require("./routes/jobRoutes")
 
 const path = require("path");
 dotenv.config();
@@ -51,9 +52,10 @@ app.use("/api/placements", placementRoutes);
 app.use("/api/admission", admissionRoutes);
 app.use("/api/workshop-registration", workshopRegistrationRoutes);
 app.use("/api/contact", contactRoutes);
-app.use("/api/mentors", mentorsRoute)
-app.use("/api/auth", adminRoutes);
-app.use("/api/jobApplication", jobApplicaitonRoute)
+app.use("/api/mentors", mentorsRoutes)
+app.use("/api/auth", adminRoutes); 
+app.use("/api/jobApplication", jobApplicaitonRoutes);
+app.use("/api/jobs", jobRoutes)
 
 app.get("/", (req, res) => {
   res.send("CFA New API is Working...!");
