@@ -13,7 +13,9 @@ const contactRoutes = require("./routes/contactRoutes");
 const adminRoutes = require("./routes/adminRoute");
 const mentorsRoutes = require("./routes/mentorsRoute");
 const jobApplicaitonRoutes = require("./routes/jobApplicationRoutes");
-const jobRoutes = require("./routes/jobRoutes")
+const jobRoutes = require("./routes/jobRoutes");
+const vaJobRoutes = require("./routes/vaJobRoutes");
+const vaApplicationRoutes = require("./routes/vaApplicationRoutes");
 
 const path = require("path");
 dotenv.config();
@@ -28,6 +30,8 @@ app.use(
     origin: [
       "http://localhost:5173",
       "http://localhost:5174",
+      "http://localhost:5175",
+      "http://localhost:5176",
       "https://www.admin.cinemafactoryacademy.com",
       "https://admin.cinemafactoryacademy.com",
       "https://www.cinemafactoryacademy.com",
@@ -55,7 +59,9 @@ app.use("/api/contact", contactRoutes);
 app.use("/api/mentors", mentorsRoutes)
 app.use("/api/auth", adminRoutes); 
 app.use("/api/jobApplication", jobApplicaitonRoutes);
-app.use("/api/jobs", jobRoutes)
+app.use("/api/jobs", jobRoutes);
+app.use("/api/va-jobs", vaJobRoutes);
+app.use("/api/va-applications", vaApplicationRoutes);
 
 app.get("/", (req, res) => {
   res.send("CFA New API is Working...!");
