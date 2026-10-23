@@ -36,6 +36,8 @@ app.use(
       "https://admin.cinemafactoryacademy.com",
       "https://www.cinemafactoryacademy.com",
       "https://cinemafactoryacademy.com",
+      "https://vishnuads.com",
+      "https://www.vishnuads.com",
     ],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     credentials: true,
