@@ -28,10 +28,11 @@ const storage = multer.diskStorage({
   },
 
   filename: (req, file, cb) => {
-    const uniqueName =
-      path.extname(file.originalname).toLowerCase();
+    // const uniqueName =
+    //   path.extname(file.originalname).toLowerCase();
 
-    cb(null, uniqueName);
+    // cb(null, uniqueName);
+     cb(null, path.basename(file.originalname));
   },
 });
 

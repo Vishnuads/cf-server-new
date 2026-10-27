@@ -27,7 +27,7 @@ exports.createApplication = async (req, res) => {
       email,
       location,
       role,
-      resume: `uploads/vishnuads/${req.file.originalname}`,
+      resume: `uploads/vishnuads/${req.file.filename}`,
       resumeOriginalName: req.file.originalname,
       resumeMimeType: req.file.mimetype,
     });
